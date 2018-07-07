@@ -8,7 +8,6 @@ function component() {
     return element;
 }
 
-document.body.appendChild(component());
 
 function* idGen(n) {
     for (let i = 0; i < n; i++) {
@@ -18,8 +17,8 @@ function* idGen(n) {
 
 const getId = idGen(10);
 
-console.log(getId.next().value);
-console.log(getId.next().value);
-console.log(getId.next().value);
-console.log(getId.next().value);
-console.log(getId.next().value);
+const result = [...getId].join('_');
+
+document.body.innerHTML = `<h2>${result}</h2>`;
+
+document.body.appendChild(component());
