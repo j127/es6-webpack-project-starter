@@ -1,5 +1,3 @@
+# ES6 Webpack Quickstart
 
-npm init -y
-npm install webpack webpack-cli --save-dev
-
-npm i -S lodash
+A quick project starter for writing ES6 in the browser.
